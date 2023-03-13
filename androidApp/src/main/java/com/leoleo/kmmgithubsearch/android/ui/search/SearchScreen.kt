@@ -92,10 +92,11 @@ private fun SearchScreenStateless(
         Box {
             // State: Result Empty
             if (uiState.isFirstFetched && uiState.repositories.isEmpty()) {
-                AppError(
-                    message = stringResource(id = R.string.empty_message),
-                    onReload = { onSearch() },
-                    modifier = Modifier.fillMaxSize(),
+                AppAlertDialog(
+                    titleText = "Result Empty",
+                    messageText = stringResource(id = R.string.empty_message),
+                    confirmText = stringResource(id = R.string.reload),
+                    onClickConfirmButton = onSearch
                 )
             }
 

@@ -54,7 +54,9 @@ struct MainContent: View {
                     
                     // データ件数0件表示View
                     if uiState.isFirstFetched && uiState.repositories.isEmpty {
-                        Text("result empty...")
+                        AppAlertDialog(openDialog: true, title:"Result Empty", positiveButtonText: "Reload", message: "result empty...", onNegativeButtonTap: {}, onPositiveButtonTap: {
+                            onReload(inputText)
+                        })
                     }
                     
                     // データ取得成功時のListView
