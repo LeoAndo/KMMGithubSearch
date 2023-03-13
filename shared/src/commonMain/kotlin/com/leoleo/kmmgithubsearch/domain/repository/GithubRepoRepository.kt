@@ -1,8 +1,8 @@
 package com.leoleo.kmmgithubsearch.domain.repository
 
 import com.leoleo.kmmgithubsearch.domain.exception.ApiErrorType
-import com.leoleo.kmmgithubsearch.domain.exception.model.RepositoryDetail
-import com.leoleo.kmmgithubsearch.domain.exception.model.RepositorySummary
+import com.leoleo.kmmgithubsearch.domain.model.RepositoryDetail
+import com.leoleo.kmmgithubsearch.domain.model.RepositorySummary
 import kotlin.coroutines.cancellation.CancellationException
 
 /**

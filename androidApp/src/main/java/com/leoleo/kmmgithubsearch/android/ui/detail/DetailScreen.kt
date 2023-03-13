@@ -15,7 +15,7 @@ import com.leoleo.kmmgithubsearch.android.R
 import com.leoleo.kmmgithubsearch.android.ui.component.*
 import com.leoleo.kmmgithubsearch.android.ui.preview.PreviewDevices
 import com.leoleo.kmmgithubsearch.domain.exception.ApiErrorType
-import com.leoleo.kmmgithubsearch.domain.exception.model.RepositoryDetail
+import com.leoleo.kmmgithubsearch.domain.model.RepositoryDetail
 
 @Composable
 fun DetailScreen(

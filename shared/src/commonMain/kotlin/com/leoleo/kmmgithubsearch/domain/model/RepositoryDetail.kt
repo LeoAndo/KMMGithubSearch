@@ -1,4 +1,4 @@
-package com.leoleo.kmmgithubsearch.domain.exception.model
+package com.leoleo.kmmgithubsearch.domain.model
 
 data class RepositoryDetail(
     val name: String,

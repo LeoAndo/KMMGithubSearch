@@ -1,7 +1,7 @@
 package com.leoleo.kmmgithubsearch.android.ui.search
 
 import com.leoleo.kmmgithubsearch.domain.exception.ApplicationError
-import com.leoleo.kmmgithubsearch.domain.exception.model.RepositorySummary
+import com.leoleo.kmmgithubsearch.domain.model.RepositorySummary
 
 data class UiState(
     val isFirstFetched: Boolean = false,

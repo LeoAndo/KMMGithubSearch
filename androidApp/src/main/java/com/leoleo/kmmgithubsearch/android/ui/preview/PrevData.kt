@@ -1,6 +1,6 @@
 package com.leoleo.kmmgithubsearch.android.ui.preview
 
-import com.leoleo.kmmgithubsearch.domain.exception.model.RepositorySummary
+import com.leoleo.kmmgithubsearch.domain.model.RepositorySummary
 
 object PrevData {
     val repositorySummaries: List<RepositorySummary> by lazy {

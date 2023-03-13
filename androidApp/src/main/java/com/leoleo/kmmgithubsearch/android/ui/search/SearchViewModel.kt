@@ -10,7 +10,7 @@ import com.leoleo.kmmgithubsearch.data.api.github.SEARCH_PER_PAGE
 import com.leoleo.kmmgithubsearch.di.Container
 import com.leoleo.kmmgithubsearch.domain.exception.ApplicationError
 import com.leoleo.kmmgithubsearch.domain.exception.ValidationErrorType
-import com.leoleo.kmmgithubsearch.domain.exception.model.RepositorySummary
+import com.leoleo.kmmgithubsearch.domain.model.RepositorySummary
 import com.leoleo.kmmgithubsearch.domain.repository.GithubRepoRepository
 import kotlinx.coroutines.*
 
