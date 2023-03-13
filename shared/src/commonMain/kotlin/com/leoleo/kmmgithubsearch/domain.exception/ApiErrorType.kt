@@ -3,7 +3,7 @@ package com.leoleo.kmmgithubsearch.domain.exception
 /**
  * API関連のエラータイプ
  */
-sealed class ApiErrorType : Exception() {
+sealed class ApiErrorType : ApplicationError() {
     data class UnAuthorized(override val message: String?) : ApiErrorType()
     data class Forbidden(override val message: String?) : ApiErrorType()
     object Network : ApiErrorType()

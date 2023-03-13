@@ -13,7 +13,6 @@ internal class KtorHandler {
     @Throws(ApiErrorType::class)
     fun handleResponseException(e: Throwable) {
         when (e) {
-            // TODO is UnknownHostException,
             is HttpRequestTimeoutException, is ConnectTimeoutException, is SocketTimeoutException -> {
                 throw ApiErrorType.Network
             }

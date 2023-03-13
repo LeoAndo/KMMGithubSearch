@@ -1,6 +1,6 @@
 package com.leoleo.kmmgithubsearch
 
-import com.leoleo.kmmgithubsearch.data.api.GithubApi
+import com.leoleo.kmmgithubsearch.data.api.github.GithubApi
 import com.leoleo.kmmgithubsearch.data.api.KtorHandler
 import com.leoleo.kmmgithubsearch.data.api.github.response.toModels
 import kotlinx.serialization.json.Json

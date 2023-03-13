@@ -1,5 +1,7 @@
-package com.leoleo.kmmgithubsearch.data.api
+package com.leoleo.kmmgithubsearch.data.api.github
 
+import com.leoleo.kmmgithubsearch.data.api.AppHttpLogger
+import com.leoleo.kmmgithubsearch.data.api.KtorHandler
 import com.leoleo.kmmgithubsearch.data.api.github.response.GithubErrorResponse
 import com.leoleo.kmmgithubsearch.data.api.github.response.RepositoryDetailResponse
 import com.leoleo.kmmgithubsearch.data.api.github.response.SearchRepositoryResponse
@@ -15,6 +17,7 @@ import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import kotlin.coroutines.cancellation.CancellationException
 
+const val SEARCH_PER_PAGE = 20
 internal class GithubApi(private val format: Json, private val ktorHandler: KtorHandler) {
     private val httpClient: HttpClient by lazy {
         HttpClient {
@@ -24,7 +27,8 @@ internal class GithubApi(private val format: Json, private val ktorHandler: Ktor
                     encodedPath += url.encodedPath
                 })
                 header("Accept", "application/vnd.github.v3+json")
-                // TODO header("Authorization", "Bearer !GITHUB_ACCESS_TOKEN!")
+                // TODO
+                // header("Authorization", "Bearer !GITHUB_ACCESS_TOKEN!")
                 header("X-GitHub-Api-Version", "2022-11-28")
             }
             install(HttpTimeout) {
@@ -102,7 +106,6 @@ internal class GithubApi(private val format: Json, private val ktorHandler: Ktor
     }
 
     companion object {
-        const val SEARCH_PER_PAGE = 20
         private const val TIMEOUT_MILLIS: Long = 30 * 1000
     }
 }
