@@ -11,6 +11,8 @@ import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.leoleo.kmmgithubsearch.android.ui.GithubRepoSearchDestinations.DetailRoute.ARG_KEY_NAME
 import com.leoleo.kmmgithubsearch.android.ui.GithubRepoSearchDestinations.DetailRoute.ARG_KEY_OWNER_NAME
+import com.leoleo.kmmgithubsearch.android.ui.detail.DetailScreen
+import com.leoleo.kmmgithubsearch.android.ui.detail.DetailViewModel
 import com.leoleo.kmmgithubsearch.android.ui.search.SearchScreen
 import com.leoleo.kmmgithubsearch.android.ui.search.SearchViewModel
 
@@ -46,6 +48,7 @@ fun MyNavHost(
                     )
                 }
             )
+            val detailViewModel = DetailViewModel()
             composable(
                 route = GithubRepoSearchDestinations.DetailRoute.routeNameWithArgs,
                 arguments = listOf(
@@ -61,11 +64,11 @@ fun MyNavHost(
                 content = {
                     val ownerName = it.arguments?.getString(ARG_KEY_OWNER_NAME) ?: return@composable
                     val name = it.arguments?.getString(ARG_KEY_NAME) ?: return@composable
-                    // TODO
-//                    DetailScreen(
-//                        ownerName = ownerName,
-//                        name = name,
-//                    )
+                    DetailScreen(
+                        ownerName = ownerName,
+                        name = name,
+                        viewModel = detailViewModel
+                    )
                 }
             )
         }
