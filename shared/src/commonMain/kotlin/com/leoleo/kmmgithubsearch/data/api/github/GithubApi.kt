@@ -17,7 +17,7 @@ import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
 import kotlin.coroutines.cancellation.CancellationException
 
-const val SEARCH_PER_PAGE = 30
+const val SEARCH_PER_PAGE = 20
 internal class GithubApi(private val format: Json, private val ktorHandler: KtorHandler) {
     private val httpClient: HttpClient by lazy {
         HttpClient {
