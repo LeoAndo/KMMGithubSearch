@@ -19,6 +19,7 @@ internal class GithubApi(private val format: Json, private val ktorHandler: Ktor
     private val httpClient: HttpClient by lazy {
         HttpClient {
             defaultRequest {
+                // TODO
                 url.takeFrom(URLBuilder().takeFrom("https://api.github.com").apply {
                     encodedPath += url.encodedPath
                 })
