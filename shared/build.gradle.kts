@@ -29,15 +29,8 @@ kotlin {
             dependencies {
                 // TODO ここに共通モジュールのプロダクトで必要なライブラリ群を追加する
                 // Data: Network
-                // ContentNegotiation 機能 (ktor-client-content-negotiation) を追加して、コンテンツを特定の形式でシリアライズ/デシリアライズします。
-                implementation("io.ktor:ktor-client-core:$ktorVersion")
-                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
                 implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
                 implementation("io.ktor:ktor-client-logging:$ktorVersion")
-
-                // Domain
-                //implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.6.4")
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
             }
         }
         val commonTest by getting {
