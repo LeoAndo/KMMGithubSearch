@@ -1,6 +1,6 @@
 package com.leoleo.kmmgithubsearch.data.api.github.response
 
-import com.leoleo.kmmgithubsearch.domain.exception.model.RepositoryDetail
+import com.leoleo.kmmgithubsearch.domain.model.RepositoryDetail
 
 @kotlinx.serialization.Serializable
 data class RepositoryDetailResponse(

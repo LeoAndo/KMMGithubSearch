@@ -24,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import com.leoleo.kmmgithubsearch.android.ui.component.AppSurface
 import com.leoleo.kmmgithubsearch.android.ui.preview.PreviewPhoneDevice
 import com.leoleo.kmmgithubsearch.domain.exception.ApiErrorType
-import com.leoleo.kmmgithubsearch.domain.exception.model.RepositorySummary
+import com.leoleo.kmmgithubsearch.domain.model.RepositorySummary
 import com.leoleo.kmmgithubsearch.android.R
 import com.leoleo.kmmgithubsearch.android.ui.component.AppAlertDialog
 import com.leoleo.kmmgithubsearch.android.ui.component.AppError

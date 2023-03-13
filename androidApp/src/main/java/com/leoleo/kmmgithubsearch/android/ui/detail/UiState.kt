@@ -1,6 +1,6 @@
 package com.leoleo.kmmgithubsearch.android.ui.detail
 
-import com.leoleo.kmmgithubsearch.domain.exception.model.RepositoryDetail
+import com.leoleo.kmmgithubsearch.domain.model.RepositoryDetail
 
 sealed interface UiState {
     object Initial : UiState
