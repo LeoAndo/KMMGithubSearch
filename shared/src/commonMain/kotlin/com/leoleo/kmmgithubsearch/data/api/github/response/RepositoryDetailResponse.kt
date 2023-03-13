@@ -3,7 +3,7 @@ package com.leoleo.kmmgithubsearch.data.api.github.response
 import com.leoleo.kmmgithubsearch.domain.exception.model.RepositoryDetail
 
 @kotlinx.serialization.Serializable
-internal data class RepositoryDetailResponse(
+data class RepositoryDetailResponse(
     val forks_count: Int,
     val id: Int,
     val language: String?,

@@ -50,6 +50,14 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.foundation:foundation")
-    implementation("androidx.compose.material:material")
+    implementation("androidx.compose.material3:material3")
+    implementation("androidx.compose.material3:material3-window-size-class") // responsive UI for larger screens
     implementation("androidx.activity:activity-compose:1.6.1")
+
+    // Compose: Navigation
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+    // Image
+    implementation("io.coil-kt:coil-compose:2.2.2")
+    // Paging
+    //implementation("androidx.paging:paging-compose:1.0.0-alpha18")
 }

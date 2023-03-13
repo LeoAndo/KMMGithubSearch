@@ -3,7 +3,7 @@ package com.leoleo.kmmgithubsearch.data.api.github.response
 import com.leoleo.kmmgithubsearch.domain.exception.model.RepositorySummary
 
 @kotlinx.serialization.Serializable
-internal data class SearchRepositoryResponse(
+data class SearchRepositoryResponse(
     val incomplete_results: Boolean,
     val items: List<Item>,
     val total_count: Int
