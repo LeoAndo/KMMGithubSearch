@@ -1,9 +1,15 @@
 package com.leoleo.kmmgithubsearch
 
+import com.leoleo.kmmgithubsearch.data.api.GithubApi
+import com.leoleo.kmmgithubsearch.data.api.KtorHandler
+import com.leoleo.kmmgithubsearch.data.api.github.response.toModels
+import kotlinx.serialization.json.Json
+
 class Greeting {
     private val platform: Platform = getPlatform()
-
-    fun greet(): String {
-        return "Hello, ${platform.name}!"
+    suspend fun greet(): String {
+        val api = GithubApi(format = Json { ignoreUnknownKeys = true }, KtorHandler())
+        val results = api.searchRepositories("AndroidGithubSearch", 1).toModels()
+        return results.first().ownerName
     }
 }
