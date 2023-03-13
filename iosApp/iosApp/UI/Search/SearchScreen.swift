@@ -97,8 +97,7 @@ struct SearchScreenScucessView: View {
                         // セル１行分のレイアウト - END
                     }
                 }.navigationDestination(for: RepositorySummary.self) { repository in
-                    // TODO 詳細画面を作る
-                    // DetailScreen(name: repository.name, ownerName: repository.ownerName, viewModel: DetailViewModel())
+                     DetailScreen(name: repository.name, ownerName: repository.ownerName, viewModel: DetailViewModel())
                 }
             }
         }

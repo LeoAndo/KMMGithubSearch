@@ -27,13 +27,10 @@ final class SearchViewModel : ObservableObject {
         }
         stepToLoadingState(repositories)
         repository.searchRepositories(query: query, page: page) { newItems, error in
-            print("ando error:  \(error)")
             if let error = error {
-                print("ando stepToError")
                 self.stepToError(repositories, error.localizedDescription)
             }
             if let newItems = newItems {
-                print("ando stepToData")
                 let isLastPage = newItems.count < GithubApiKt.SEARCH_PER_PAGE
                 self.stepToData(newItems, isLastPage, page)
             }
